@@ -121,7 +121,6 @@
 
 .u-section-2 .u-image-1 {
   transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
-  background-image: url("images/video-production-houston.jpg");
   background-position: 50% 50%;
 }
 
@@ -145,7 +144,6 @@
 
 .u-section-2 .u-image-2 {
   transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
-  background-image: url("images/Houston-car-photography.jpg");
   background-position: 50% 50%;
 }
 
@@ -169,7 +167,6 @@
 
 .u-section-2 .u-image-3 {
   transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
-  background-image: url("images/instalook-posts.jpg");
   background-position: 50% 50%;
 }
 
@@ -300,7 +297,6 @@
 
 .u-section-3 .u-image-1 {
   min-height: 643px;
-  background-image: url("images/B007C371_210130PZ_VIZTV.MXF.09_00_51_14.Still0031.jpg");
   background-position: 50% 50%;
 }
 
@@ -477,12 +473,22 @@
     min-height: 100px;
   }
 
+  .u-section-3 .u-container-layout-4 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .u-section-3 .u-icon-2 {
     margin-left: 122px;
   }
 
   .u-section-3 .u-layout-cell-5 {
     min-height: 100px;
+  }
+
+  .u-section-3 .u-container-layout-5 {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .u-section-3 .u-text-5 {
@@ -575,7 +581,7 @@
     margin-top: 30px;
   }
 } .u-section-4 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("images/CanonC70.jpg");
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.85), rgba(0,0,0,0.85));
   background-position: 50% 50%;
 }
 
@@ -1137,6 +1143,10 @@
 
   .u-section-5 .u-layout-cell-3 {
     min-height: 240px;
+  }
+
+  .u-section-5 .u-container-layout-3 {
+    padding: 0;
   }
 }
 

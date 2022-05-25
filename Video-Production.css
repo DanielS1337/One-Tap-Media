@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("images/IMG_20220421_115323.jpg");
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55));
   background-position: 50% 50%;
 }
 
@@ -50,7 +50,7 @@
 
 .u-section-2 .u-image-1 {
   min-height: 643px;
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("images/IMG_20220421_115304.jpg");
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25));
   background-position: 50% 50%;
 }
 
@@ -547,6 +547,10 @@
   .u-section-4 .u-container-layout-2 {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .u-section-4 .u-container-layout-3 {
+    padding: 0;
   }
 }
 

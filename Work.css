@@ -232,6 +232,10 @@
     padding-right: 30px;
   }
 
+  .u-section-2 .u-container-layout-3 {
+    padding: 0;
+  }
+
   .u-section-2 .u-container-layout-4 {
     padding-left: 30px;
     padding-right: 30px;
@@ -240,6 +244,10 @@
   .u-section-2 .u-container-layout-5 {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .u-section-2 .u-container-layout-6 {
+    padding: 0;
   }
 
   .u-section-2 .u-container-layout-7 {
@@ -254,6 +262,10 @@
   .u-section-2 .u-container-layout-8 {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .u-section-2 .u-container-layout-9 {
+    padding: 0;
   }
 }
 

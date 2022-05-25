@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("images/TRIUMPHJAVIER.jpg");
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55));
   background-position: 50% 50%;
 }
 
@@ -50,7 +50,6 @@
 
 .u-section-2 .u-image-1 {
   min-height: 643px;
-  background-image: url("images/IMG_6958.jpg");
   background-position: 50% 50%;
 }
 
