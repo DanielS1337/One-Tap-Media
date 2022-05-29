@@ -4,13 +4,11 @@
 
 .u-section-1 .u-text-1 {
   font-size: 6rem;
-  font-weight: 500;
-  text-transform: none;
   margin: 278px 511px 0 12px;
 }
 
 .u-section-1 .u-text-2 {
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   margin: 12px 749px 0 21px;
 }
 
@@ -68,6 +66,7 @@
   .u-section-1 .u-text-1 {
     width: 540px;
     margin-right: 0;
+    font-size: 3.75rem;
   }
 
   .u-section-1 .u-text-2 {
@@ -84,11 +83,13 @@
 @media (max-width: 575px) {
   .u-section-1 .u-text-1 {
     width: 340px;
+    font-size: 3rem;
   }
 
   .u-section-1 .u-text-2 {
     width: 340px;
     margin-right: 0;
+    font-size: 1.875rem;
   }
 
   .u-section-1 .embed-responsive-1 {
@@ -125,21 +126,17 @@
 }
 
 .u-section-2 .u-container-layout-1 {
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .u-section-2 .u-text-2 {
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-top: 270px;
-  text-shadow: 2px 2px 2px rgba(0,0,0,1);
+  transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  font-size: 2.25rem;
 }
 
 .u-section-2 .u-text-3 {
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-top: 20px;
   text-shadow: 2px 0px 8px rgba(0,0,0,1);
+  margin: 57px 30px 0;
 }
 
 .u-section-2 .u-image-2 {
@@ -148,21 +145,17 @@
 }
 
 .u-section-2 .u-container-layout-2 {
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .u-section-2 .u-text-4 {
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-top: 270px;
-  text-shadow: 2px 2px 2px rgba(0,0,0,1);
+  transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  font-size: 2.25rem;
 }
 
 .u-section-2 .u-text-5 {
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-top: 20px;
   text-shadow: 2px 0px 8px rgba(0,0,0,1);
+  margin: 57px 30px 0;
 }
 
 .u-section-2 .u-image-3 {
@@ -171,21 +164,17 @@
 }
 
 .u-section-2 .u-container-layout-3 {
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .u-section-2 .u-text-6 {
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-top: 270px;
-  text-shadow: 2px 2px 2px rgba(0,0,0,1);
+  transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  font-size: 2.25rem;
 }
 
 .u-section-2 .u-text-7 {
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-top: 20px;
   text-shadow: 2px 0px 8px rgba(0,0,0,1);
+  margin: 57px 30px 0;
 }
 
 @media (max-width: 1199px) {
@@ -198,15 +187,30 @@
   }
 
   .u-section-2 .u-image-1 {
-    transition-duration: 0.75s;
+    transition-duration: 0.5s;
+  }
+
+  .u-section-2 .u-text-2 {
+    transition-duration: 0.5s;
+    margin: 233px 18px 0;
   }
 
   .u-section-2 .u-image-2 {
-    transition-duration: 0.75s;
+    transition-duration: 0.5s;
+  }
+
+  .u-section-2 .u-text-4 {
+    transition-duration: 0.5s;
+    margin: 233px 18px 0;
   }
 
   .u-section-2 .u-image-3 {
-    transition-duration: 0.75s;
+    transition-duration: 0.5s;
+  }
+
+  .u-section-2 .u-text-6 {
+    transition-duration: 0.5s;
+    margin: 233px 18px 0;
   }
 }
 
@@ -214,11 +218,55 @@
   .u-section-2 .u-repeater-1 {
     grid-template-columns: calc(50% - 17.5px) calc(50% - 17.5px);
   }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-section-2 .u-container-layout-3 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 767px) {
   .u-section-2 .u-repeater-1 {
     grid-template-columns: 100%;
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-2 .u-container-layout-3 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-text-2 {
+    font-size: 1.875rem;
+  }
+
+  .u-section-2 .u-text-4 {
+    font-size: 1.875rem;
+  }
+
+  .u-section-2 .u-text-6 {
+    font-size: 1.875rem;
   }
 }
 
@@ -286,6 +334,48 @@
 
 .u-container-layout.hover .u-section-2 .u-image-3 {
   transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+}
+
+.u-section-2 .u-text-2,
+.u-section-2 .u-text-2:before,
+.u-section-2 .u-text-2 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, background-size, background-position;
+}
+
+.u-section-2 .u-container-layout:hover .u-text-2 {
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+}
+
+.u-container-layout.hover .u-section-2 .u-text-2 {
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+}
+
+.u-section-2 .u-text-4,
+.u-section-2 .u-text-4:before,
+.u-section-2 .u-text-4 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, background-size, background-position;
+}
+
+.u-section-2 .u-container-layout:hover .u-text-4 {
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+}
+
+.u-container-layout.hover .u-section-2 .u-text-4 {
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+}
+
+.u-section-2 .u-text-6,
+.u-section-2 .u-text-6:before,
+.u-section-2 .u-text-6 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, background-size, background-position;
+}
+
+.u-section-2 .u-container-layout:hover .u-text-6 {
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+}
+
+.u-container-layout.hover .u-section-2 .u-text-6 {
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 } .u-section-3 {
   min-height: 643px;
 }
@@ -315,7 +405,7 @@
 
 .u-section-3 .u-text-1 {
   font-weight: 700;
-  margin: 39px auto 0 2px;
+  margin: 20px auto 0 2px;
 }
 
 .u-section-3 .u-text-2 {
