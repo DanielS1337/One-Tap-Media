@@ -7,9 +7,9 @@
     <title>DanielS Media</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Home.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" "="" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" "="" defer=""></script>
-    <meta name="generator" content="Nicepage 4.17.10, nicepage.com">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
     <meta property="og:title" content="DanielS Media">
     <meta property="og:description" content="Video Production Company">
     <meta property="og:image" content="images/IMG_6958.jpg">
@@ -60,9 +60,57 @@
   "https://www.instagram.com/1337_media/"
   ]
 }
-</script></head>
+</script><script src="https://www.google.com/recaptcha/api.js?render=6LeClqIiAAAAADe5zFz4429pNOVY5Srg0Bhgi_bp"></script>
+    <script>
+        (function (grecaptcha, sitekey, actions) {
+            var recaptcha = {
+                execute: function (action) {
+                    try {
+                        grecaptcha.execute(
+                            sitekey,
+                            {action: action}
+                        ).then(function (token) {
+                            var forms = document.getElementsByTagName('form');
+
+                            for (var i = 0; i < forms.length; i++) {
+                                var fields = forms[i].getElementsByTagName('input');
+
+                                for (var j = 0; j < fields.length; j++) {
+                                    var field = fields[j];
+
+                                    if ('recaptchaResponse' === field.getAttribute('name')) {
+                                        field.setAttribute('value', token);
+                                        break;
+                                    }
+                                }
+                            }
+                        });
+                    } catch (e) {
+                        var formError = document.querySelector('.u-form-send-error');
+
+                        if (formError) {
+                            formError.innerText = 'Error for site owner: ' + e.message.replace(/:[\s\S]*/, '');
+                            formError.style.display = 'block';
+                        }
+                    }
+                },
+
+                executeContact: function () {
+                    recaptcha.execute(actions['contact']);
+                }
+            };
+
+            grecaptcha.ready(recaptcha.executeContact);
+            document.addEventListener('change', recaptcha.executeContact, false);
+        })(
+            grecaptcha,
+            '6LeClqIiAAAAADe5zFz4429pNOVY5Srg0Bhgi_bp',
+            {'contact': 'contact'}
+        );
+    </script>
+</head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-grey-80 u-header u-sticky u-sticky-2d37 u-header" id="sec-7a77"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="Home.html" data-page-id="280123049" class="u-image u-logo u-image-1" data-image-width="2590" data-image-height="556" title="Home">
+        <a href="Home.html" class="u-image u-logo u-image-1" data-image-width="2590" data-image-height="556" title="Home">
           <img src="images/Signaturegold.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -122,19 +170,19 @@
         <h2 class="u-text u-text-default u-text-1">Services</h2>
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-hover-feature u-image u-list-item u-repeater-item u-shading lazyload u-image-1" data-image-width="1600" data-image-height="1600" data-href="Video-Production.html" data-page-id="177126265" data-bg="url(&quot;images/video-production-houston.jpg&quot;)">
+            <div class="u-container-style u-hover-feature u-image u-list-item u-repeater-item u-shading lazyload u-image-1" data-image-width="1600" data-image-height="1600" data-href="Video-Production.html" data-bg="url(&quot;images/video-production-houston.jpg&quot;)">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <h1 class="u-hover-feature u-text u-text-2">Video Production</h1>
                 <p class="u-text u-text-3">Visual excellence, captivating creativity, and a passion for the art.</p>
               </div>
             </div>
-            <div class="u-container-style u-hover-feature u-image u-list-item u-repeater-item u-shading lazyload u-image-2" data-image-width="1600" data-image-height="1600" data-href="Photography.html" data-page-id="1341725137" data-bg="url(&quot;images/Houston-car-photography.jpg&quot;)">
+            <div class="u-container-style u-hover-feature u-image u-list-item u-repeater-item u-shading lazyload u-image-2" data-image-width="1600" data-image-height="1600" data-href="Photography.html" data-bg="url(&quot;images/Houston-car-photography.jpg&quot;)">
               <div class="u-container-layout u-similar-container u-container-layout-2">
                 <h1 class="u-hover-feature u-text u-text-4">Photography</h1>
                 <p class="u-text u-text-5">Well composed and professional. Worth well over 1000 words</p>
               </div>
             </div>
-            <div class="u-container-style u-hover-feature u-image u-list-item u-repeater-item u-shading lazyload u-image-3" data-image-width="1290" data-image-height="1600" data-href="Media-Management.html" data-page-id="15498229" data-bg="url(&quot;images/instalook-posts.jpg&quot;)">
+            <div class="u-container-style u-hover-feature u-image u-list-item u-repeater-item u-shading lazyload u-image-3" data-image-width="1290" data-image-height="1600" data-href="Media-Management.html" data-bg="url(&quot;images/instalook-posts.jpg&quot;)">
               <div class="u-container-layout u-similar-container u-container-layout-3">
                 <h1 class="u-hover-feature u-text u-text-6">Media Management</h1>
                 <p class="u-text u-text-7">Make sure you stand out from the crowd, and let people know who you are.</p>
@@ -173,7 +221,7 @@
                           <span style="font-weight: 700;"> Since embarking on this journey I have met and worked with so many incredible people, and have found my calling in industrial media.</span>
                           <br>
                         </p>
-                        <a href="About.html" data-page-id="46592645" class="u-black u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-black u-radius-50 u-text-palette-3-dark-1 u-btn-1">About</a>
+                        <a href="About.html" class="u-black u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-black u-radius-50 u-text-palette-3-dark-1 u-btn-1">About</a>
                       </div>
                     </div>
                   </div>
@@ -297,7 +345,7 @@
             </div>
           </div>
         </div>
-        <a href="Work.html" data-page-id="908816783" class="u-black u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-black u-radius-50 u-text-palette-3-dark-1 u-btn-1">See More</a>
+        <a href="Work.html" class="u-black u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-black u-radius-50 u-text-palette-3-dark-1 u-btn-1">See More</a>
       </div>
     </section>
     
@@ -321,7 +369,7 @@
               </div>
               <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
                 <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <a href="Home.html" data-page-id="280123049" class="u-image u-logo u-image-1" data-image-width="800" data-image-height="521" title="Home">
+                  <a href="Home.html" class="u-image u-logo u-image-1" data-image-width="800" data-image-height="521" title="Home">
                     <img src="images/D-Gold.png" class="u-logo-image u-logo-image-1">
                   </a>
                 </div>

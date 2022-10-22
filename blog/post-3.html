@@ -7,9 +7,9 @@
     <title>Post 4 Headline</title>
     <link rel="stylesheet" href="../nicepage.css" media="screen">
 <link rel="stylesheet" href="../Post-Template.css" media="screen">
-    <script class="u-script" type="text/javascript" src="../jquery.js" "="" defer=""></script>
-    <script class="u-script" type="text/javascript" src="../nicepage.js" "="" defer=""></script>
-    <meta name="generator" content="Nicepage 4.17.10, nicepage.com">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
     <link rel="icon" href="../images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
@@ -52,9 +52,57 @@
   "https://www.instagram.com/1337_media/"
   ]
 }
-</script></head>
+</script><script src="https://www.google.com/recaptcha/api.js?render=6LeClqIiAAAAADe5zFz4429pNOVY5Srg0Bhgi_bp"></script>
+    <script>
+        (function (grecaptcha, sitekey, actions) {
+            var recaptcha = {
+                execute: function (action) {
+                    try {
+                        grecaptcha.execute(
+                            sitekey,
+                            {action: action}
+                        ).then(function (token) {
+                            var forms = document.getElementsByTagName('form');
+
+                            for (var i = 0; i < forms.length; i++) {
+                                var fields = forms[i].getElementsByTagName('input');
+
+                                for (var j = 0; j < fields.length; j++) {
+                                    var field = fields[j];
+
+                                    if ('recaptchaResponse' === field.getAttribute('name')) {
+                                        field.setAttribute('value', token);
+                                        break;
+                                    }
+                                }
+                            }
+                        });
+                    } catch (e) {
+                        var formError = document.querySelector('.u-form-send-error');
+
+                        if (formError) {
+                            formError.innerText = 'Error for site owner: ' + e.message.replace(/:[\s\S]*/, '');
+                            formError.style.display = 'block';
+                        }
+                    }
+                },
+
+                executeContact: function () {
+                    recaptcha.execute(actions['contact']);
+                }
+            };
+
+            grecaptcha.ready(recaptcha.executeContact);
+            document.addEventListener('change', recaptcha.executeContact, false);
+        })(
+            grecaptcha,
+            '6LeClqIiAAAAADe5zFz4429pNOVY5Srg0Bhgi_bp',
+            {'contact': 'contact'}
+        );
+    </script>
+</head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-grey-80 u-header u-sticky u-sticky-2d37 u-header" id="sec-7a77"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="../Home.html" data-page-id="280123049" class="u-image u-logo u-image-1" data-image-width="2590" data-image-height="556" title="Home">
+        <a href="../Home.html" class="u-image u-logo u-image-1" data-image-width="2590" data-image-height="556" title="Home">
           <img src="../images/Signaturegold.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -136,7 +184,7 @@
               </div>
               <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
                 <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <a href="../Home.html" data-page-id="280123049" class="u-image u-logo u-image-1" data-image-width="800" data-image-height="521" title="Home">
+                  <a href="../Home.html" class="u-image u-logo u-image-1" data-image-width="800" data-image-height="521" title="Home">
                     <img src="../images/D-Gold.png" class="u-logo-image u-logo-image-1">
                   </a>
                 </div>
