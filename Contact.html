@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="Contact.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 5.6.2, nicepage.com">
+    <meta name="generator" content="Nicepage 5.9.10, nicepage.com">
     <link rel="icon" href="images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -33,11 +33,15 @@
     function gdprConfirmed() {
         return true;
     }
-    function dynamicLoadScript() {
+    function dynamicLoadScript(src) {
         var script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/api.js?render=6LeZUDkkAAAAAF7t9aRYWNSCgknIL5eXATWulm-E';
+        script.src = src && typeof src === 'string' ? src : 'https://www.google.com/recaptcha/api.js?render=6LeZUDkkAAAAAF7t9aRYWNSCgknIL5eXATWulm-E';
         script.async = true;
         document.body.appendChild(script);
+        script.onload = function() {
+            let event = new CustomEvent("recaptchaLoaded");
+            document.dispatchEvent(event);
+        };
     }
     document.addEventListener('DOMContentLoaded', function () {
         var confirmButton = document.querySelector('.u-cookies-consent .u-button-confirm');
@@ -47,59 +51,65 @@
     });
     </script>
     <script>
-    if (gdprConfirmed()) {
-        document.write("<sc" + "ript src=\"https://www.google.com/recaptcha/api.js?render=6LeZUDkkAAAAAF7t9aRYWNSCgknIL5eXATWulm-E\"></sc" + "ript>");
-    }
+        document.addEventListener("DOMContentLoaded", function(){
+            if (!gdprConfirmed()) {
+                return;
+            }
+            dynamicLoadScript();
+        });
     </script>
     <script>
-    if (gdprConfirmed()) {
-        (function (grecaptcha, sitekey, actions) {
-            var recaptcha = {
-                execute: function (action, submitFormCb) {
-                    try {
-                        grecaptcha.execute(
-                            sitekey,
-                            {action: action}
-                        ).then(function (token) {
-                            var forms = document.getElementsByTagName('form');
+        document.addEventListener("recaptchaLoaded", function() {
+            if (!gdprConfirmed()) {
+                return;
+            }
+            (function (grecaptcha, sitekey, actions) {
+                var recaptcha = {
+                    execute: function (action, submitFormCb) {
+                        try {
+                            grecaptcha.execute(
+                                sitekey,
+                                {action: action}
+                            ).then(function (token) {
+                                var forms = document.getElementsByTagName('form');
 
-                            for (var i = 0; i < forms.length; i++) {
-                                var fields = forms[i].getElementsByTagName('input');
+                                for (var i = 0; i < forms.length; i++) {
+                                    var fields = forms[i].getElementsByTagName('input');
 
-                                for (var j = 0; j < fields.length; j++) {
-                                    var field = fields[j];
+                                    for (var j = 0; j < fields.length; j++) {
+                                        var field = fields[j];
 
-                                    if ('recaptchaResponse' === field.getAttribute('name')) {
-                                        field.setAttribute('value', token);
-                                        break;
+                                        if ('recaptchaResponse' === field.getAttribute('name')) {
+                                            field.setAttribute('value', token);
+                                            break;
+                                        }
                                     }
                                 }
+                                submitFormCb();
+                            });
+                        } catch (e) {
+                            var formError = document.querySelector('.u-form-send-error');
+
+                            if (formError) {
+                                formError.innerText = 'Site Owner Error: ' + e.message.replace(/:[\s\S]*/, '');
+                                formError.style.display = 'block';
                             }
-                            submitFormCb();
-                        });
-                    } catch (e) {
-                        var formError = document.querySelector('.u-form-send-error');
-
-                        if (formError) {
-                            formError.innerText = 'Site Owner Error: ' + e.message.replace(/:[\s\S]*/, '');
-                            formError.style.display = 'block';
                         }
+                    },
+
+                    executeContact: function (submitFormCb) {
+                        recaptcha.execute(actions['contact'], submitFormCb);
                     }
-                },
+                };
 
-                executeContact: function (submitFormCb) {
-                    recaptcha.execute(actions['contact'], submitFormCb);
-                }
-            };
-
-            window.recaptchaObject = recaptcha;
-        })(
-            grecaptcha,
-            
-            '6LeZUDkkAAAAAF7t9aRYWNSCgknIL5eXATWulm-E',
-            {'contact': 'contact'}
-        );
-    }
+                window.recaptchaObject = recaptcha;
+            })(
+                grecaptcha,
+                
+                '6LeZUDkkAAAAAF7t9aRYWNSCgknIL5eXATWulm-E',
+                {'contact': 'contact'}
+            );
+        });
     </script>
 <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header" id="sec-451e"><div class="u-clearfix u-sheet u-sheet-1">
@@ -144,7 +154,7 @@
           <div class="u-container-layout u-container-layout-1">
             <h2 class="u-align-center u-text u-text-custom-color-3 u-text-1">Contact Me</h2>
             <div class="u-form u-form-1">
-              <form action="https://formspree.io/f/xwkjvqpo" class="u-clearfix u-form-spacing-13 u-form-vertical u-inner-form" style="padding: 0;" source="custom" name="form">
+              <form action="https://formspree.io/f/xwkjvqpo" class="u-clearfix u-form-spacing-13 u-form-vertical u-inner-form" style="padding: 0;" source="custom" name="form" method="post">
                 <div class="u-form-email u-form-group u-form-partition-factor-2">
                   <label for="email-f18c" class="u-label u-text-custom-color-3 u-label-1">Email</label>
                   <input type="email" placeholder="Enter Your Email" id="email-f18c" name="EMAIL" class="u-grey-5 u-input u-input-rectangle u-input-1" required="">
@@ -193,7 +203,7 @@
         <a href="Home.html" class="u-image u-logo u-image-1" data-image-width="1092" data-image-height="376" title="Home">
           <img src="images/OTMwhiteGOOD.png" class="u-logo-image u-logo-image-1">
         </a>
-        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-text u-text-1">(832) 284-1635<br>info@danielschmidt.media
+        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-text u-text-1">(832) 284-1635<br>daniel@onetap.media
         </p>
       </div></footer>
   
